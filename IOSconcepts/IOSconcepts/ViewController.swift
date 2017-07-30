@@ -12,14 +12,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.specialLiterals()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    //MARK: - Special Literals
+    func specialLiterals() {
+        print("#file literal from file: \(#file)")
+        print("#function literal from function: \(#function)")
+        print("#line: \(#line) -> #column: \(#column)")
+    }
 }
 
