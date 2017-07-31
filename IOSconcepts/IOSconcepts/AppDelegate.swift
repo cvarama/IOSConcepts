@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.specialLiterals()
+        print("********************************************")
+        self.wildCardPattern(startIndex: 1, endIndex: 10)
         return true
     }
 
@@ -41,6 +43,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    //MARK: - Special Literals
+    func specialLiterals() {
+        print("#file literal from file: \(#file)")
+        print("#function literal from function: \(#function)")
+        print("#line: \(#line) -> #column: \(#column)")
+    }
+    
+    //MARK: - Wildcard pattern
+    //
+    func wildCardPattern(startIndex:Int, endIndex:Int){
+        for _ in startIndex...endIndex{
+            //Do anything for endIndex-startIndex times
+            print("Current Index is : \(startIndex) at time \(Date.timeIntervalSinceReferenceDate)")
+        }
+    }
 }
 
